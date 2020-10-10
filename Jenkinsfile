@@ -17,8 +17,9 @@ pipeline {
                     app = docker.build("komla52/train-schedule")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
-                    }
                 }
             }
         }
+    }
+
 }
